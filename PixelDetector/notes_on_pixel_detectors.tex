@@ -1,0 +1,120 @@
+% this is a Latex manuscript
+
+%=======================================================================
+%   Copyright (C) 2025 Univ. of Bham  All rights reserved.
+%   
+%   		FileName：		notes_on_particle_physics.tex
+%   	 	Author：		LongLI <long.l@cern.ch>
+%   		Time：			2025.10.23
+%   		Description：
+%
+%======================================================================
+
+%defination 
+\documentclass[a4paper,12pt]{article}
+
+
+%package
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{overpic}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{hyperref}
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\graphicspath{{fig/}}
+
+\sisetup{
+	free-standing-units=true,
+	space-before-unit=true,
+	use-xspace=true
+}
+
+% hype link setting
+\hypersetup{colorlinks,breaklinks,
+  linkcolor=black,citecolor=blue,
+  filecolor=blue,urlcolor=blue,
+  pdfpagemode=UseNone
+}
+
+%fot list
+\usepackage{listings}
+\usepackage{color, xcolor}
+\usepackage{listings}
+%\lstset{emph={define}, emphstyle=\color{yellow}}
+\lstset{backgroundcolor=\color{white}}
+\lstset{language=Python, 
+    breaklines=true,
+    basicstyle=\ttfamily\footnotesize, 
+    keywordstyle=\color{keywords},
+    commentstyle=\color{comments},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    identifierstyle=\color{blue},
+    %procnamekeys={def,class}
+    morekeywords={*,...,-},
+    numbers=left,
+    xleftmargin=2em,
+    frame=single,
+    framexleftmargin=1.5em
+}
+
+
+
+% personal macros
+\newcommand{\eq}[1]{\eqref{eq:#1}}
+\newcommand{\tab}[1]{Table~\ref{tab:#1}}
+\newcommand{\fig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\sect}[1]{Section~\ref{sect:#1}}
+
+
+%title
+\title{Long's notes and thoughts on Pixel Detector}
+\author{Long LI\footnote{long.l@cern.ch}}
+%\emailAdd{long.l@cern.ch}
+\date{Oct. 2025}
+
+\begin{document}
+
+
+%Add content for page two here (useful for two-sided printing)
+\thispagestyle{empty}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Book: Primary Analogue circuits.}
+\label{sect:book1}
+
+\subsection{BJT}
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/BJT_input_output}
+\end{figure}
+
+\begin{enumerate}
+    \item input \\
+    \begin{equation}
+    i_B = f(u_{BE})|_{u_{CE}}
+    \end{equation}
+
+    \item output \\
+    \begin{equation}
+    i_C = f(u_{CE})|_{i_B}
+    \end{equation}
+        
+\end{enumerate}
+
+
+
+\end{document}

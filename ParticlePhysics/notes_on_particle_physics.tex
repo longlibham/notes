@@ -1,0 +1,126 @@
+% this is a Latex manuscript
+
+%=======================================================================
+%   Copyright (C) 2025 Univ. of Bham  All rights reserved.
+%   
+%   		FileName：		notes_on_particle_physics.tex
+%   	 	Author：		LongLI <long.l@cern.ch>
+%   		Time：			2025.10.23
+%   		Description：
+%
+%======================================================================
+
+%defination 
+\documentclass[a4paper,12pt]{article}
+
+
+%package
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{overpic}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\graphicspath{{fig/}}
+
+\sisetup{
+	free-standing-units=true,
+	space-before-unit=true,
+	use-xspace=true
+}
+
+% hype link setting
+\hypersetup{colorlinks,breaklinks,
+  linkcolor=black,citecolor=blue,
+  filecolor=blue,urlcolor=blue,
+  pdfpagemode=UseNone
+}
+
+%fot list
+\usepackage{listings}
+\usepackage{color, xcolor}
+\usepackage{listings}
+%\lstset{emph={define}, emphstyle=\color{yellow}}
+\lstset{backgroundcolor=\color{white}}
+\lstset{language=Python, 
+    breaklines=true,
+    basicstyle=\ttfamily\footnotesize, 
+    keywordstyle=\color{keywords},
+    commentstyle=\color{comments},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    identifierstyle=\color{blue},
+    %procnamekeys={def,class}
+    morekeywords={*,...,-},
+    numbers=left,
+    xleftmargin=2em,
+    frame=single,
+    framexleftmargin=1.5em
+}
+
+
+
+% personal macros
+\newcommand{\eq}[1]{\eqref{eq:#1}}
+\newcommand{\tab}[1]{Table~\ref{tab:#1}}
+\newcommand{\fig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\sect}[1]{Section~\ref{sect:#1}}
+
+
+%title
+\title{Long's notes and thoughts on Particle Physics}
+\author{Long LI\footnote{long.l@cern.ch}}
+%\emailAdd{long.l@cern.ch}
+\date{Oct. 2025}
+
+\begin{document}
+
+
+%Add content for page two here (useful for two-sided printing)
+\thispagestyle{empty}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Book: An Introduction To The Standard Model Of Particle Physics}
+\label{sect:book1}
+
+\subsection{The construction of the Standard Model}
+\begin{enumerate}
+    \item Bosons
+        \begin{itemize}
+            \item Scalar \\
+            $J^{P} = 0^{+}$, spin 0, parity +1. Example: Higgs Boson
+            \item Pseudo-Scalar \\
+            $J^P = 0^-$, example Pions, Kaons, $\eta , \eta^{'}$
+            \item Vector \\
+            $J^P = 1^{-}$, example: $\gamma$, W, Z, $\rho$, $\Omega$, $J/\Psi$, $\Upsilon$.
+        \end{itemize}
+    \item Deep In-elastic Scattering (DIS)
+        \begin{itemize}
+            \item $Q^2$ \\
+            Negative square of the four-momentum transferred from the incoming electron to the target proton via the virtual photon.\\
+            \begin{equation}
+                Q^2 = -q^2
+            \end{equation}
+            q, four-momentum of the virtual photon ($q = p_{electron-in} - p_{electron-out}$)  
+            \item Bjorken Scaling variable \\
+            \begin{equation}
+                x = \frac{Q^2}{2pq}
+            \end{equation}
+            Physically represents the fraction of the proton's momentum carried by the parton that the photon hit. $p$, the four-momentum of the target proton.
+        \end{itemize}
+        
+\end{enumerate}
+
+
+
+\end{document}
