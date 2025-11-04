@@ -95,11 +95,12 @@
 \section{Book: Primary Analogue circuits.}
 \label{sect:book1}
 
-\subsection{BJT}
+\subsection{Transistors}
+\subsubsection{BJT}
 
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/BJT_input_output}
+  \includegraphics[width=0.6\textwidth]{plots/BJT_input_output}
 \end{figure}
 
 \begin{enumerate}
@@ -115,6 +116,58 @@
         
 \end{enumerate}
 
+\subsubsection{MOS}
+\begin{enumerate}
+    \item characteristics
+    \begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{plots/mosfet_symbol_characteristics}
+    \end{figure}
 
+\end{enumerate}
+
+\subsubsection{JFET}
+    \begin{enumerate}
+        \item Structure \& characteristics
+        \begin{figure}[htb!]
+            \centering
+            \subfigure[]{
+                \includegraphics[width=0.4\textwidth, origin=c]{plots/Structure-of-JFET}
+            }
+            \subfigure[]{
+                \includegraphics[width=0.4\textwidth, origin=c]{plots/N-Channel-JFET-Output-and-Transfer-Characteristics-}
+            }
+        \end{figure}
+    \end{enumerate}
+
+\subsubsection{key parameter}
+\begin{enumerate}
+    \item DC \\
+    $V_{gs}(th)$, $V_{gs}(off)$, $I_{dss}$, $R_{gs}(DC)$ 
+    \item AC \\
+    $g_m = \frac{\partial i_D}{\partial V_{gs}}|_{V_{ds}}$
+\end{enumerate}
+
+\subsection{Amplifier}
+\begin{enumerate}
+    \item Direct coupling
+    \item RC coupling
+    \item Th$\acute{\text{e}}$venin theorem (Norton Equation)\\
+    "Any linear electrical network containing only voltage sources, current sources and resistances 
+    can be replaceed at terminals A-B by an equivalent combination of a voltage source $V_{th}$ in 
+    a series connection with a resistance $R_{th}$"
+    \begin{itemize}
+        \item The equivalent voltage $V_{th}$ is the voltage obtained at terminals A-B of the network with
+        terminal A-B open circuited.
+        \item The equivalent Resistance $R_{th}$ is the resistance that the circiut between terminals A and 
+        B would have if all ideal \textbf{voltage sources} in the circuit were replced by a \textbf{short circuit}
+        and all ideal \textbf{current sources} were replaced by an \textbf{open circuit}.
+        \item If terminals A and B are connected to one another (short), then the current flowing from A and B 
+        \item will be $\frac{V_{th}}{R_{th}}$ according to the \textbf{Th$\acute{\text{e}}$venin equivalent circuit}.
+        This means that $R_{th}$ could alternatively be calculated as $V_{th}$ devided by the short-curcuit current 
+        between A and B when they are connected together. 
+
+    \end{itemize}
+\end{enumerate}
 
 \end{document}

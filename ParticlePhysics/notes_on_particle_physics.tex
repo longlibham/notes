@@ -27,8 +27,10 @@
 \usepackage{subfigure}
 \usepackage{caption}
 \usepackage{hyperref}
+\usepackage{svg}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\graphicspath{{fig/}}
+
+\graphicspath{{plots/}}
 
 \sisetup{
 	free-standing-units=true,
@@ -121,6 +123,145 @@
         
 \end{enumerate}
 
+\subsection{Lorentz transformations}
+\begin{enumerate}
+    \item Postulates
+        \begin{itemize}
+            \item Principle of relativity: Physical laws are the same in all inertial frames
+            \item Constancy of light speed: light propagates at speed c in all inertial frames
+        \end{itemize}
+        \begin{figure}[htb!]
+            \centering
+            \includegraphics[width=0.4\textwidth]{lorentz_transformation}
+            \caption{$S^{\prime}$ is moving along X axis with V w.r.t S}
+            \label{fig:lt:a}
+        \end{figure}
+    \item Lorentz transformation derivation
+    As in \fig{lt:a}, $S^{\prime}$ is moving along X axis with speed v w.r.t S frame. \\
+    \textbf{Principle 1 linear relation} between frame S and frame $S^{\prime}$.\\
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+                y^{\prime} = y, \\
+                z^{\prime} = z, \\
+                t^{\prime} = At + Bx, \\
+                x^{\prime} = Dt + Ex \\
+            \end{aligned}
+            \right.
+    \end{equation}
+    A, B, D and E are coefficients.\\
+    \textbf{Principle 2 principle of relativity:}\\
+    $S^{\prime}$ is moving w.r.t S in volicity V, Inversely, S is moving w.r.t $S^{\prime}$ in volicity -V.
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+                t = A(-v)t^{\prime} + B(-v) x^{\prime}, \\
+                x = D(-v)t^{\prime} + E(-v) x^{\prime} \\
+            \end{aligned}
+            \right.
+    \label{eq:lt:a}
+    \end{equation} 
+    \begin{itemize}
+        \item A(v): relates time in $S^{\prime}$ to time in S, shold out change with volicity. A(v) = A(-v)
+        \item B(v): relates space in $S^{\prime}$ to time in S, should change sign with volicity. B(v) = - B(-v) 
+        \item D(v): relates time in $S^{\prime}$ to space in S, should change sign with volicity. D(v) = - D(-v)
+        \item E(v): relates space in $S^{\prime}$ to space in S, should not change with volicity. E(v) = E(-v)
+    \end{itemize}
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+                t = At^{\prime} - Bx^{\prime}, \\
+                x = -Dt^{\prime} + Ex^{\prime} \\
+            \end{aligned}
+            \right.
+        \label{eq:lt:b}
+    \end{equation}
+    Substitute \eq{lt:b} into \eq{lt:a},
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+                A^2 - BD = 1, AB - BE = 0, \\
+                ED - DA = 0, E^2 -DB = 1 \\
+            \end{aligned}
+            \right.
+    \label{eq:lt:c}
+    \end{equation}
+    Then,
+    \begin{equation}
+        B(A - E) = 0, \\
+        B = 0 \, \text{or}\, A = E\\
+    \end{equation}
+    B = 0 means Galilean transformation, and it makes no sense. 
+    \begin{equation}
+        \left\{
+            \begin{align}
+                t = At^{\prime} - Bx^{\prime}, \\
+                x = -Dt^{\prime} + Ax^{\prime}, \\
+                t^{\prime} = At + Bx, \\
+                x^{\prime} = Dt + Ax \\
+            \end{align}
+            \right.
+    \end{equation}
+
+    \textbf{principle 3: volicity of light keeps constant in all inertial frame}, x =ct, 
+    $x^{\prime}$ = c$t^{\prime}$.
+
+    \begin{equation}
+        \begin{aligned}
+        c(At + Bct) = Dt + Act, \\
+        c^2B = D
+        \end{aligned}
+    \end{equation}
+
+    \textbf{Initial states: $x^{\prime} = 0$}
+    \begin{equation}
+        \begin{aligned}
+        0 = Dt + Ax, \\
+        v = \frac{x}{t} = -\frac{D}{A},\\
+        D = -Av, \\
+        B = -\frac{Av}{c^2}
+        \end{aligned}
+    \end{equation}
+
+    Then, 
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+            t^{\prime} = A(t - \frac{v}{c^2}x), \\
+            x^{\prime} = A(-vt + x)\\
+            \end{aligned}
+            \right.
+    \end{equation}
+
+And, 
+    \begin{equation}
+    (ct^{\prime})^2 - x^{\prime}^2 = (ct)^2 - x^2
+    \end{equation}
+
+So, \\
+    \begin{equation}
+        \begin{aligned}
+            A^2(-vt + x)^2 -c^2A^2(t - \frac{v}{c^2}x)^2 = c^2t^2 - x^2 \\
+            A^2[(c^2 - v^2)(\frac{x^2}{c^2} - t^2)] = c^2t^2 - x^2 \\
+            \frac{A^2}{c^2}[(c^2 - v^2)(x^2 - c^2t^2)] = c^2t^2 - x^2 \\
+            \frac{A^2}{c^2}[(c^2 - v^2) - 1](x^2 - c^2t^2) = 0\\
+            \frac{A^2}{c^2}(c^2 - v^2) = 1\\
+            A^2 = \frac{c^2}{c^2 - v^2}\\
+            A = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma
+        \end{aligned}
+    \end{equation}
+Finally,
+    \begin{equation}
+        \left\{
+            \begin{aligned}
+            t^{\prime} = \gamma(t - \frac{v}{c^2}x), \\
+            x^{\prime} = \gamma(-vt + x), \\
+            y^{\prime} = y, \\
+            z^{\prime} = z
+            \end{aligned}
+            \right.
+    \end{equation}
+\end{enumerate}
 
 
 \end{document}
