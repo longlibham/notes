@@ -140,25 +140,21 @@
     As in \fig{lt:a}, $S^{\prime}$ is moving along X axis with speed v w.r.t S frame. \\
     \textbf{Principle 1 linear relation} between frame S and frame $S^{\prime}$.\\
     \begin{equation}
-        \left\{
-            \begin{aligned}
-                y^{\prime} = y, \\
-                z^{\prime} = z, \\
-                t^{\prime} = At + Bx, \\
-                x^{\prime} = Dt + Ex \\
-            \end{aligned}
-            \right.
+        \begin{cases}
+            y^{\prime} = y, \\
+            z^{\prime} = z, \\
+            t^{\prime} = At + Bx, \\
+            x^{\prime} = Dt + Ex \\
+        \end{cases}
     \end{equation}
     A, B, D and E are coefficients.\\
     \textbf{Principle 2 principle of relativity:}\\
     $S^{\prime}$ is moving w.r.t S in volicity V, Inversely, S is moving w.r.t $S^{\prime}$ in volicity -V.
     \begin{equation}
-        \left\{
-            \begin{aligned}
-                t = A(-v)t^{\prime} + B(-v) x^{\prime}, \\
-                x = D(-v)t^{\prime} + E(-v) x^{\prime} \\
-            \end{aligned}
-            \right.
+        \begin{cases}
+            t = A(-v)t^{\prime} + B(-v) x^{\prime}, \\
+            x = D(-v)t^{\prime} + E(-v) x^{\prime} \\
+        \end{cases}
     \label{eq:lt:a}
     \end{equation} 
     \begin{itemize}
@@ -168,22 +164,18 @@
         \item E(v): relates space in $S^{\prime}$ to space in S, should not change with volicity. E(v) = E(-v)
     \end{itemize}
     \begin{equation}
-        \left\{
-            \begin{aligned}
-                t = At^{\prime} - Bx^{\prime}, \\
-                x = -Dt^{\prime} + Ex^{\prime} \\
-            \end{aligned}
-            \right.
+        \begin{cases}
+            t = At^{\prime} - Bx^{\prime}, \\
+            x = -Dt^{\prime} + Ex^{\prime} \\
+        \end{cases}
         \label{eq:lt:b}
     \end{equation}
     Substitute \eq{lt:b} into \eq{lt:a},
     \begin{equation}
-        \left\{
-            \begin{aligned}
-                A^2 - BD = 1, AB - BE = 0, \\
-                ED - DA = 0, E^2 -DB = 1 \\
-            \end{aligned}
-            \right.
+        \begin{cases}
+            A^2 - BD = 1, AB - BE = 0, \\
+            ED - DA = 0, E^2 -DB = 1 \\
+        \end{cases}
     \label{eq:lt:c}
     \end{equation}
     Then,
@@ -193,24 +185,22 @@
     \end{equation}
     B = 0 means Galilean transformation, and it makes no sense. 
     \begin{equation}
-        \left\{
-            \begin{align}
-                t = At^{\prime} - Bx^{\prime}, \\
-                x = -Dt^{\prime} + Ax^{\prime}, \\
-                t^{\prime} = At + Bx, \\
-                x^{\prime} = Dt + Ax \\
-            \end{align}
-            \right.
+        \begin{cases}
+            t = At^{\prime} - Bx^{\prime}, \\
+            x = -Dt^{\prime} + Ax^{\prime}, \\
+            t^{\prime} = At + Bx, \\
+            x^{\prime} = Dt + Ax \\
+        \end{cases}
     \end{equation}
 
     \textbf{principle 3: volicity of light keeps constant in all inertial frame}, x =ct, 
     $x^{\prime}$ = c$t^{\prime}$.
 
     \begin{equation}
-        \begin{aligned}
+        \begin{cases}
         c(At + Bct) = Dt + Act, \\
         c^2B = D
-        \end{aligned}
+        \end{cases}
     \end{equation}
 
     \textbf{Initial states: $x^{\prime} = 0$}
@@ -225,20 +215,18 @@
 
     Then, 
     \begin{equation}
-        \left\{
-            \begin{aligned}
-            t^{\prime} = A(t - \frac{v}{c^2}x), \\
-            x^{\prime} = A(-vt + x)\\
-            \end{aligned}
-            \right.
+        \begin{cases}
+        t^{\prime} = A(t - \frac{v}{c^2}x), \\
+        x^{\prime} = A(-vt + x)\\
+        \end{cases}
     \end{equation}
 
-And, 
+    And, 
     \begin{equation}
-    (ct^{\prime})^2 - x^{\prime}^2 = (ct)^2 - x^2
+    (ct^{\prime})^2 - (x^{\prime})^2 = (ct)^2 - x^2
     \end{equation}
 
-So, \\
+    So, \\
     \begin{equation}
         \begin{aligned}
             A^2(-vt + x)^2 -c^2A^2(t - \frac{v}{c^2}x)^2 = c^2t^2 - x^2 \\
@@ -250,18 +238,58 @@ So, \\
             A = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma
         \end{aligned}
     \end{equation}
-Finally,
+    Finally,
     \begin{equation}
-        \left\{
-            \begin{aligned}
-            t^{\prime} = \gamma(t - \frac{v}{c^2}x), \\
-            x^{\prime} = \gamma(-vt + x), \\
-            y^{\prime} = y, \\
-            z^{\prime} = z
-            \end{aligned}
-            \right.
+        \begin{cases}
+        t^{\prime} = \gamma(t - \frac{v}{c^2}x), \\
+        x^{\prime} = \gamma(-vt + x), \\
+        y^{\prime} = y, \\
+        z^{\prime} = z
+        \end{cases}
     \end{equation}
+
+    \item Einstein summation convention
+    \item Proper Lorentz group ($L^{\mu}_{\nu}$)
+    \item Metric tensor ($g_{\mu\nu}$) and contravariant metric tensor ($g^{\mu \nu}$)
+    \begin{equation}
+        g_{\mu\nu} = g^{\mu\nu} = \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & -1 & 0 & 0 \\
+            0 & 0 & -1 & 0 \\
+            0 & 0 & 0 & -1 
+        \end{pmatrix}
+    \end{equation}
+
 \end{enumerate}
+
+\subsubsection{Scalars, contravariant and covariant four-vectors}
+    \begin{enumerate}
+        \item Scalars: invariant under Lorentz transformations \\
+        \begin{equation}
+            (\Delta s)^2 = (\Delta s^{\prime})^2 = g_{\mu\nu}\Delta x^{\mu}\Delta x^{\nu}
+        \end{equation}
+        \item contravariant four-vector: $a^{\mu}$ under a proper Lorentz transformation 
+        \begin{equation}
+            {a^{\prime}}^{\mu} = L^{\mu}_{\nu} a^{\nu}
+        \end{equation}
+        Usually to describe displacements
+        example: energy-momentum vector of a particle (E/c, \textbf{p}).
+
+        \item covariant four-vector \\
+        Usually for gradient. \\
+        \begin{equation}
+            a_{\mu} = g_{\mu\nu}a^{\nu}
+        \end{equation}
+        
+
+        then, 
+        \begin{equation}
+            (\Delta s)^2 = g_{\mu\nu}\Delta x^{\mu} \Delta x^{\nu} = \Delta x_{\nu} \Delta x^{\nu}
+        \end{equation}
+
+        \item $\alpha^{\mu} = g^{\mu\nu}a_{\nu}$
+
+    \end{enumerate}
 
 
 \end{document}
